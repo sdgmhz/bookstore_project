@@ -13,6 +13,8 @@
             <p>{{ book.description }}</p>
             <p>{{ book.price }}</p>
 {#        <a href="{% url 'book_detail' pk=book.id %}">more details</a>#}
+        <a class="btn btn-info" href="{% url 'book_update' pk=book.id %}"><h6>ویرایش کتاب {{ book.title }}</h6></a>
+        <a class="btn btn-danger" href="{% url 'book_delete' pk=book.id %}"><h6>حذف کتاب {{ book.title }}</h6></a>
         <br>
         <br>
     {% endfor %}
